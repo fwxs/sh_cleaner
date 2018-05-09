@@ -1,4 +1,4 @@
-#!/usr/bin/bash -i
+#!/bin/bash -i
 
 
 # Author pacmanator
@@ -16,7 +16,7 @@ function clear_shell_history
 		clear_shell_history_urandom;
 	else
 		echo "[*] Shredding $HISTFILE."
-		$SHRED -n 10 -z "$HISTFILE"
+		$SHRED -n 3 -z "$HISTFILE"
 		sleep 1
 		echo "[*] Nulling $HISTFILE"
 		cat /dev/null > "$HISTFILE"
